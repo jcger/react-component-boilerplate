@@ -1,2 +1,8 @@
+import React, { Component } from 'react'
+
 // this should be the entry point to your library
-module.exports = {};
+export default class Test extends Component {
+  render () {
+    return <h1>Component Boilerplate</h1>
+  }
+}
