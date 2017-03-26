@@ -25,7 +25,7 @@ process.env.BABEL_ENV = TARGET;
 
 const common = {
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css', '.png', '.jpg']
+    extensions: ['', '.js', '.jsx', '.css', '.png', '.jpg', 'scss']
   },
   module: {
     preLoaders: [
@@ -97,8 +97,12 @@ if (TARGET === 'start') {
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          loaders: ['style', 'css']
+          test: /\.scss$/,
+          loaders: ['style', 'css', 'sass'],
+          include: [
+            config.paths.docs,
+            config.paths.src
+          ]
         },
         {
           test: /\.jsx?$/,
@@ -159,8 +163,12 @@ if (TARGET === 'gh-pages' || TARGET === 'gh-pages:stats') {
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          loader: ExtractTextPlugin.extract('style', 'css')
+          test: /\.scss$/,
+          loaders: ['style', 'css', 'sass'],
+          include: [
+            config.paths.docs,
+            config.paths.src
+          ]
         },
         {
           test: /\.jsx?$/,

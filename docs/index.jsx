@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Test from '../src'
-import './main.css'
+import Boilerplate from '../src'
+import './main.scss'
 
-ReactDOM.render(<Test />, document.getElementById('app'))
+ReactDOM.render(<Boilerplate />, document.getElementById('app'))

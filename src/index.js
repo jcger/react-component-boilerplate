@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import './index.scss'
 
 // this should be the entry point to your library
-export default class Test extends Component {
+export default class Boilerplate extends Component {
   render () {
-    return <h1>Component Boilerplate</h1>
+    return (
+      <div className="style-me">Component Boilerplate</div>
+    )
   }
 }
