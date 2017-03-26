@@ -202,6 +202,13 @@ const distCommon = {
   module: {
     loaders: [
       {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+        include: [
+          config.paths.docs,
+          config.paths.src
+        ]
+      }, {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: config.paths.src
